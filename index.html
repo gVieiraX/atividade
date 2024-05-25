@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-4">Formulário de Cadastro</h2>
+        <form id="userForm" action="process_form.php" method="post">
+            <div class="form-group">
+                <label for="fullName">Nome Completo:</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Idade:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gênero:</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="country">País de Residência:</label>
+                <select class="form-control" id="country" name="country" required>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Breve Descrição:</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+            <button type="button" class="btn btn-info" onclick="window.location.href='view_data.php'">Consultar Dados</button>
+        </form>
+    </div>
+</body>
+</html>
