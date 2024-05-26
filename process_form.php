@@ -1,5 +1,4 @@
 <?php
-echo "Olá";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullName = trim($_POST['fullName']);
     $email = trim($_POST['email']);
